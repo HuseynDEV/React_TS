@@ -1,15 +1,13 @@
 import { type ReactNode } from 'react'
-
-
 type HeaderProps = {
     image: {
         src: string,
         alt: string
-    };
+    },
     children: ReactNode
 }
 
-export default function Header({ image, children }: HeaderProps) {
+const Header = ({ image, children }: HeaderProps) => {
     return (
         <header>
             <img {...image} />
@@ -17,3 +15,5 @@ export default function Header({ image, children }: HeaderProps) {
         </header>
     )
 }
+
+export default Header
